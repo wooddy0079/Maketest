@@ -1,5 +1,8 @@
 LIBS = lm
 
+# Declare the cross compiler as gcc
+CC   = gcc
+
 # Declare the objects which I have
 OBJS = main.o thankyou.o
 
@@ -9,7 +12,7 @@ OBJS = main.o thankyou.o
 # gcc -o $@ ${OBJS} means specify the outfile as main main.o thankyou.o
 # The $@ is means main 
 main: ${OBJS}
-	gcc -o $@ ${OBJS} 
+	${CC} -o $@ ${OBJS} 
 
 # The commmond line, "clean". Notice that, there must begin with "TAB" button.  
 # rm -f main ${OBJS} means remove forced for main main.o thankyou.o   
