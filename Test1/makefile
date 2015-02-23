@@ -11,13 +11,15 @@ objects = main.o thankyou.o
 # The commmond line, "main". Notice that, there must begin with "TAB" button.  
 # gcc -o $@ $^ means specify the outfile as main main.o thankyou.o
 # The $@ is means main 
-main: $^
-	${CC} -o $@ $^ 
+main: ${objects}
+	${CC} -o $@ ${objects} 
+	clear 
+	./$@
 
 # The commmond line, "clean". Notice that, there must begin with "TAB" button.  
 # rm -f main $^ means remove forced for main main.o thankyou.o   
 clean:
-	rm -f main $^
+	rm -f main ${objects}
 
 # The commmond line, "output". Notice that, there must begin with "TAB" button.
 # ./main means execution the result of main  
