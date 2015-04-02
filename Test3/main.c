@@ -2,6 +2,7 @@
 
 int main( )
 {
-	printf( " Hello World \n " );
+        for(1;10;1)
+	 printf( " Hello World \n " );
 	return 0;
 }
